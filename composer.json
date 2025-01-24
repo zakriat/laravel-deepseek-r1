@@ -8,9 +8,17 @@
         "laravel/framework": "^11.0",
         "guzzlehttp/guzzle": "^7.8"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
     "autoload": {
         "psr-4": {
             "Zakriat\\DeepseekR1\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zakriat\\DeepseekR1\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -25,8 +33,12 @@
     },
     "authors": [
         {
-            "name": "Zakria tunio",
+            "name": "Zakria Tunio",
             "email": "mzakriatunio@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html coverage"
+    }
 }
