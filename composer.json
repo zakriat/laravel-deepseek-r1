@@ -1,0 +1,32 @@
+{
+    "name": "zakriat/laravel-deepseek-r1",
+    "description": "Laravel package for Deepseek R1 AI integration",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zakriat\\DeepseekR1\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zakriat\\DeepseekR1\\DeepseekR1ServiceProvider"
+            ],
+            "aliases": {
+                "DeepseekR1": "Zakriat\\DeepseekR1\\Facades\\DeepseekR1"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Zakria tunio",
+            "email": "mzakriatunio@gmail.com"
+        }
+    ]
+}
