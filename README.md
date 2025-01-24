@@ -9,3 +9,5 @@ Laravel package for integrating with Deepseek R1 AI API.
 
 ```bash
 composer require zakriat/laravel-deepseek-r1
+
+mff
