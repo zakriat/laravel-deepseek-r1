@@ -11,7 +11,7 @@ class DeepseekServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/deepseek-r1.php', 'deepseek-r1');
         
-        $this->app->singleton(DeepseekClientInterface::class, function ($app) {
+        $this->app->singleton('deepseek-r1', function ($app) {
             return new DeepseekClient(
                 config('deepseek-r1.api_key'),
                 config('deepseek-r1.base_uri'),
@@ -19,6 +19,9 @@ class DeepseekServiceProvider extends ServiceProvider
                 config('deepseek-r1.retries', 3)
             );
         });
+    
+        // Optional interface binding
+        $this->app->alias('deepseek-r1', \Zakriat\DeepseekR1\Contracts\DeepseekClientInterface::class);
     }
 
     public function boot()
