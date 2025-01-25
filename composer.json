@@ -3,11 +3,19 @@
     "description": "Laravel-first Deepseek R1 AI integration with Guzzle",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "deepseek",
+        "laravel",
+        "api",
+        "ai",
+        "guzzle",
+        "integration"
+    ],
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "guzzlehttp/guzzle": "^7.8",
-        "illuminate/contracts": "^11.0",
         "ext-json": "*"
     },
     "require-dev": {
@@ -37,16 +45,28 @@
     },
     "scripts": {
         "test": "phpunit",
-        "test-coverage": "phpunit --coverage-html coverage"
+        "test-coverage": "phpunit --coverage-html coverage",
+        "post-autoload-dump": [
+            "@php artisan package:discover --ansi"
+        ]
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
     "authors": [
         {
             "name": "Zakria Tunio",
             "email": "mzakriatunio@gmail.com",
-            "role": "Developer"
+            "role": "Developer",
+            "homepage": "https://github.com/zakriat"
         }
-    ]
+    ],
+    "homepage": "https://github.com/zakriat/laravel-deepseek-r1",
+    "support": {
+        "issues": "https://github.com/zakriat/laravel-deepseek-r1/issues",
+        "source": "https://github.com/zakriat/laravel-deepseek-r1"
+    }
 }
