@@ -8,6 +8,6 @@ class DeepseekR1 extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'deepseek-r1';
+        return \Zakriat\DeepseekR1\Contracts\DeepseekClientInterface::class;
     }
 }

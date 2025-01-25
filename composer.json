@@ -1,15 +1,19 @@
 {
     "name": "zakriat/laravel-deepseek-r1",
-    "description": "Laravel package for Deepseek R1 AI integration",
+    "description": "Laravel-first Deepseek R1 AI integration with Guzzle",
     "type": "library",
     "license": "MIT",
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/contracts": "^11.0",
+        "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.0"
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.6"
     },
     "autoload": {
         "psr-4": {
@@ -24,21 +28,25 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Zakriat\\DeepseekR1\\DeepseekR1ServiceProvider"
+                "Zakriat\\DeepseekR1\\DeepseekServiceProvider"
             ],
             "aliases": {
                 "DeepseekR1": "Zakriat\\DeepseekR1\\Facades\\DeepseekR1"
             }
         }
     },
-    "authors": [
-        {
-            "name": "Zakria Tunio",
-            "email": "mzakriatunio@gmail.com"
-        }
-    ],
     "scripts": {
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage"
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "authors": [
+        {
+            "name": "Zakria Tunio",
+            "email": "mzakriatunio@gmail.com",
+            "role": "Developer"
+        }
+    ]
 }
