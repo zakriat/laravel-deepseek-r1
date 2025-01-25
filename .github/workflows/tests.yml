@@ -5,26 +5,20 @@ on: [push, pull_request]
 jobs:
   tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php: [8.2]
-        laravel: [11]
-
     steps:
       - uses: actions/checkout@v4
-
+      
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php }}
+          php-version: 8.2
           extensions: mbstring, dom, fileinfo, curl
           coverage: none
 
       - name: Install Dependencies
         run: |
-            composer remove laravel/framework --no-update
-            composer require "laravel/framework:^11.0" --no-update
-            composer update --prefer-dist --no-interaction --no-audit
+          composer install --prefer-dist --no-interaction
+          composer dump-autoload -o
 
       - name: Run Tests
         run: composer test

@@ -17,7 +17,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Zakriat\\DeepseekR1\\": "src/"
+             "Zakriat\\DeepseekR1\\": "src/",
+        "Zakriat\\DeepseekR1\\Facades\\": "src/Facades/"
         }
     },
     "autoload-dev": {
