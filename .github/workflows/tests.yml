@@ -22,8 +22,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel}}" --no-interaction --no-update
-          composer install --prefer-dist --no-interaction
+            composer remove laravel/framework --no-update
+            composer require "laravel/framework:^11.0" --no-update
+            composer update --prefer-dist --no-interaction --no-audit
 
       - name: Run Tests
         run: composer test
