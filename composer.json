@@ -3,7 +3,6 @@
     "description": "Laravel-first Deepseek R1 AI integration with Guzzle",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": [
         "deepseek",
         "laravel",
@@ -13,7 +12,7 @@
         "integration",
         "deepseek-r1",
         "laravel-ai",
-        "llm-integration",
+        "llm-integration"
     ],
     "require": {
         "php": "^8.2",
