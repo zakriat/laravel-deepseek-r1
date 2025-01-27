@@ -48,10 +48,7 @@
     "minimum-stability": "stable",
     "scripts": {
         "test": "phpunit",
-        "test-coverage": "phpunit --coverage-html coverage",
-        "post-autoload-dump": [
-            "@php artisan package:discover --ansi"
-        ]
+        "test-coverage": "phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true,
