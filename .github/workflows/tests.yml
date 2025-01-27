@@ -34,5 +34,10 @@ jobs:
           composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
+      - name: Setup Environment
+        run: |
+          cp .env.example .env
+          composer dump-autoload
+
       - name: Execute tests
         run: vendor/bin/phpunit
