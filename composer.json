@@ -45,6 +45,7 @@
             }
         }
     },
+    "minimum-stability": "stable",
     "scripts": {
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage",
