@@ -10,7 +10,10 @@
         "api",
         "ai",
         "guzzle",
-        "integration"
+        "integration",
+        "deepseek-r1",
+        "laravel-ai",
+        "llm-integration",
     ],
     "require": {
         "php": "^8.2",
